@@ -1,0 +1,43 @@
+{
+  "name": "apollo-frontend",
+  "author": "Artur Kornatowski <artur.kornatowski@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^3.10.0",
+    "apollo-boost": "^0.1.16",
+    "apollo-client": "2.4.2",
+    "apollo-link-error": "^1.1.1",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "graphql": "14.0.2",
+    "graphql-tag": "2.10.0",
+    "jwt-decode": "2.2.0",
+    "lodash": "^4.17.11",
+    "morgan": "^1.9.1",
+    "react": "16.5.2",
+    "react-apollo": "2.2.4",
+    "react-dom": "16.5.2",
+    "react-intl-universal": "^1.13.1",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.0.5",
+    "react-simple-storage": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

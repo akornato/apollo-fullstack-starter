@@ -1,0 +1,60 @@
+
+version: "3"
+
+volumes:
+  db_data:
+
+networks:
+  backend:
+  frontend:
+
+services:
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - "db_data:/data/db"
+    networks:
+      - backend
+    restart: always
+
+  api:
+    image: node:10-alpine
+    build: backend/
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+      - MONGO_URI=mongodb://mongo/starter
+      - APP_SECRET="OpenlyInLoveWithJavaScript"
+    ports:
+      - 4000:4000
+    volumes:
+      - "./backend:/backend" # mount Docker context
+      - "/backend/node_modules" # but exclude node_modules
+    working_dir: /backend
+    command: "sh -c 'npm i && npm run dev'"
+    networks:
+      - backend
+    depends_on:
+      - mongo
+
+  web:
+    image: node:10-alpine
+    build: frontend/
+    environment:
+      - NODE_ENV=development
+      - PORT=8080
+      - CHOKIDAR_USEPOLLING=true # watch files for page reloading
+    ports:
+      - 8080:8080      
+    volumes:
+      - "./frontend:/frontend" # mount Docker context
+      - "/frontend/node_modules" # but exclude node_modules
+    working_dir: /frontend
+    command: "sh -c 'npm i && npm run dev'"
+    networks:
+      - frontend
+    depends_on:
+      - api

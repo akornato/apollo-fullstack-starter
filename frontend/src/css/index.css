@@ -1,0 +1,61 @@
+.flex-row,
+.flex-row-reverse,
+.flex-col,
+.flex-col-reverse {
+  display: flex;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.background-image {
+  background-image: url('../assets/landing-background.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.ant-collapse-header {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  background-color: #f8fafc !important;
+}
+
+.ant-tag {
+  height: 24px !important;
+  background-color: #f8fafc !important;
+}
+
+.ant-form-item-label {
+  white-space: normal !important;
+}
+
+.ant-btn.disabled,
+.ant-btn[disabled],
+.ant-btn.disabled:hover,
+.ant-btn[disabled]:hover,
+.ant-btn.disabled:focus,
+.ant-btn[disabled]:focus,
+.ant-btn.disabled:active,
+.ant-btn[disabled]:active,
+.ant-btn.disabled.active,
+.ant-btn[disabled].active {
+  background-color: #f8fafc !important;
+}
+
+.ant-input-disabled {
+  background-color: #f8fafc !important;
+}
+
+.ant-table-thead th {
+  background-color: #f8fafc !important;
+}
+
+.ant-table-footer {
+  background-color: #f8fafc !important;
+}

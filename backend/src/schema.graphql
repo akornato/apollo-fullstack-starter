@@ -1,0 +1,74 @@
+scalar JSON
+
+type Email {
+  email: String!
+}
+
+type Token {
+  token: String!
+}
+
+type Entity {
+  entityName: String
+  VATIN: String
+  statisticalNumber: String
+  courtRegisterNumber: String
+  street: String
+  postalCode: String
+  city: String
+  country: String
+  www: String
+  email: String
+}
+
+type User {
+  id: String!
+
+  firstName: String!
+  lastName: String!
+  email: String!
+  hash: String!
+
+  roles: [String!]!
+
+  entity: Entity!
+
+  code: String
+
+  jobTitle: String
+
+  agreedToMarketingCommunication: Boolean
+  agreedToPersonalDataProcessing: Boolean
+}
+
+type Client {
+  id: String!
+
+  owner: String!
+
+  entity: Entity!
+
+  entityType: String
+  entitySubtype: String
+  employeeCount: Int
+  contractorCount: Int
+}
+
+type Query {
+  meUser: User!
+  myClientList: [Client!]!
+  myClient(id: String!): Client!
+}
+
+type Mutation {
+  signup(firstName: String!, lastName: String!, email: String!, password: String!): Token!
+  login(email: String!, password: String!): Token!
+  requestCode(email: String!, from: String!, subject: String!): Email!
+  setPassword(email: String!, code: String!, password: String!): Token!
+
+  updateMe(data: JSON!): User!
+
+  addMyClient(entityName: String!): Client!
+  updateMyClient(id: String!, data: JSON!): Client!
+  deleteMyClient(id: String!): Client!
+}

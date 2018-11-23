@@ -1,0 +1,39 @@
+{
+  "name": "apollo-backend",
+  "author": "Artur Kornatowski <artur.kornatowski@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -e js,graphql -x node -r dotenv/config src/server.js",
+    "debug": "nodemon -e js,graphql -x node --inspect -r dotenv/config src/server.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "apollo-server-express": "^2.2.2",
+    "bcryptjs": "2.4.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "graphql-import": "^0.7.1",
+    "graphql-mongodb-projection": "^1.1.1",
+    "graphql-type-json": "^0.2.1",
+    "jsonwebtoken": "8.3.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.6",
+    "morgan": "^1.9.1",
+    "randomstring": "^1.1.5",
+    "validator": "^10.5.0"
+  },
+  "devDependencies": {
+    "dotenv": "6.0.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "graphql-cli": "2.16.7",
+    "nodemon": "1.18.4",
+    "prettier": "^1.15.2"
+  }
+}
