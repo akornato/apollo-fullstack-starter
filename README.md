@@ -2,6 +2,10 @@
 
 User auth + signup + pass reset. Users have Clients. Both Users and Clients have entity data.
 
+## Acknowledgments
+
+This project was initialized with [Boilerplate for a Advanced Fullstack GraphQL App with React](https://github.com/graphql-boilerplates/react-fullstack-graphql/tree/master/advanced) minus graphql-yoga minus prisma minus tachyons plus mongo plus react-intl plus tailwind plus ant.design.
+
 ## Built With (backend)
 
 * [Apollo Server](https://www.apollographql.com/docs/apollo-server/) - Build a production-ready, self-documenting API for GraphQL clients, using data from any source.
@@ -34,7 +38,3 @@ docker-compose up
 ## License
 
 MIT
-
-## Acknowledgments
-
-This project is largely [Boilerplate for a Advanced Fullstack GraphQL App with React](https://github.com/graphql-boilerplates/react-fullstack-graphql/tree/master/advanced) minus graphql-yoga minus prisma minus tachyons plus mongo plus react-intl plus tailwind plus ant.design.
