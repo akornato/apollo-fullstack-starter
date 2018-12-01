@@ -30,3 +30,11 @@ User auth + signup + pass reset. Users have Clients. Both Users and Clients have
 ```
 docker-compose up
 ```
+
+## License
+
+MIT
+
+## Acknowledgments
+
+This project is largely [Boilerplate for a Advanced Fullstack GraphQL App with React](https://github.com/graphql-boilerplates/react-fullstack-graphql/tree/master/advanced) minus graphql-yoga minus prisma minus tachyons plus mongo plus react-intl plus tailwind plus ant.design.
